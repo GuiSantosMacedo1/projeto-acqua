@@ -1,0 +1,58 @@
+:root{
+  --font-primary: 'Poppins', sans-serif;
+
+  /* Cores */
+
+  --color-primary: #FFFFFF;
+  --color-secondary: #F1F1F1;
+  --color-text: #1c1c1c;
+  --color-text-secondary: #FFFFFF;
+  --color-overlay: #1c1c1c83;
+
+  --gradient: linear-gradient(to left, #3498DB, #34495E);
+} 
+
+
+/* Limpando o estilo do navegador */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  list-style: none;
+}
+
+/* Definindo estilos gerais */
+body{
+  font-family: var(--font-primary);
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.section-timer{
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+  background: url('./images//foto-cima.png') no-repeat center center;
+  background-size: cover; */
+  background: url('./images/foto-cima.png') no-repeat center center;
+  height: 80dvh;
+}
+.timer{
+  height: 100%;
+  background-color: var(--color-overlay);
+  
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+.timer p{
+  color: var(--color-text-secondary);
+}
+
+img {
+  max-width: 100%;
+}
