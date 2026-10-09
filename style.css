@@ -9,6 +9,8 @@
   --color-text-secondary: #FFFFFF;
   --color-overlay: #1c1c1c83;
 
+  --color-border: #BBBBBB;
+
   --gradient: linear-gradient(to left, #3498DB, #34495E);
 } 
 
@@ -19,10 +21,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  
   list-style: none;
 }
-
+/* Classe utilitária */
+.novidades form label{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: inset(50%);
+  white-space: nowrap;
+  border: 0
+}
 /* Definindo estilos gerais */
 body{
   font-family: var(--font-primary);
@@ -31,14 +44,10 @@ body{
 }
 
 .section-timer{
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  gap: 2rem;
-  background: url('./images//foto-cima.png') no-repeat center center;
-  background-size: cover; */
-  background: url('./images/foto-cima.png') no-repeat center center;
+  background: url('./images/foto-cima.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 80dvh;
 }
 .timer{
@@ -51,8 +60,87 @@ body{
 }
 .timer p{
   color: var(--color-text-secondary);
+  text-shadow: 2px 2px #000000;
 }
 
+.timer div{
+  text-align: center;
+}
+
+.timer p:first-child{
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.novidades{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height:80dvh;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  text-align: center;
+}
+
+.novidades h2{
+  font-size: 2.375rem;
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+.novidades h2 + p{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.novidades p + p{
+  font-size: 1rem;
+  max-width: 75ch;
+  margin-bottom: 2rem;
+}
+
+.novidades form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  gap: 1rem;
+}
+
+input, button{
+  height: 3rem;
+  border-radius: 3.75rem
+}
+
+input{
+  border: 1px solid var(--color-border);
+  padding: 0 1rem;
+}
+
+button{
+  border: 0;
+  background: var(--gradient);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.andamento {
+  padding: 4.75rem 1rem;
+  text-align: center; 
+}
+
+.andamento h2{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.andamento p{
+  margin: 0.5rem 2rem;
+}
 img {
   max-width: 100%;
 }
